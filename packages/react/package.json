@@ -1,0 +1,10 @@
+{
+  "name": "@breakpoint-observer/react",
+  "version": "1.0.0",
+  "dependencies": {
+    "@breakpoint-observer/core": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  }
+}

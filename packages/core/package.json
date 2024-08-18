@@ -1,0 +1,9 @@
+{
+  "name": "@breakpoint-observer/core",
+  "version": "1.0.0",
+  "dependencies": {
+    "eventemitter3": "^5.0.1"
+  },
+  "main": "./index.cjs",
+  "module": "./index.js"
+}
