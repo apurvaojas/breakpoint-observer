@@ -10,7 +10,7 @@ module.exports = withNx(
     compiler: 'babel',
     external: ['react', 'react-dom', 'react/jsx-runtime'],
     format: ['esm'],
-    assets: [{ input: '.', output: '.', glob: 'README.md' }],
+    assets: [{ input: '.', output: '.', glob: './packages/react/README.md' }],
   },
   {
     // Provide additional rollup configuration here. See: https://rollupjs.org/configuration-options

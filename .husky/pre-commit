@@ -1,1 +1,1 @@
-npm
+echo "precommit hook"
