@@ -3,15 +3,18 @@ name: Publish
 
 on:
   push:
-    tags:
-      - v*.*.*
+    branches:
+      - release-candidate
+  workflow_dispatch:
 
 jobs:
   test:
     name: Publish
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      actions: write
+      attestations: write
+      contents: write
       id-token: write # needed for provenance data generation
     timeout-minutes: 10
     steps:
@@ -34,9 +37,19 @@ jobs:
         run: npx nx run-many -t build -p angular core react --no-cloud
         shell: bash
 
+      - name: Setup git identity
+        run: |
+          git config --global user.email "$USER_EMAIL"
+          git config --global user.name "Apurva Ojas"
+        shell: bash
+        env:
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
+
       - name: Publish packages
-        run: npx nx release publish --no-cloud
+        run: npx nx release
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
+          NX_NO_CLOUD: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
