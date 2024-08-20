@@ -1,40 +1,39 @@
 {
-    "name": "docs",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "docs",
-    "projectType": "application",
-    "targets": {
-      "build": {
-        "executor": "nx:run-script",
-        "options": {
-            "script": "build"
-        }
-      },
-      "start": {
-        "executor": "nx:run-script",
-        "options": {
-            "script": "start"
-        }
-      },
-      "swizzle": {
-        "executor": "nx:run-script",
-        "options": {
-            "script": "swizzle"
-        }
-      },
-      "serve": {
-        "executor": "nx:run-script",
-        "options": {
-            "script": "serve"
-        }
-      },
-      "clear": {
-        "executor": "nx:run-script",
-        "options": {
-            "script": "clear"
-        }
+  "name": "docs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "docs",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "build"
       }
     },
-    "tags": []
+    "start": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "start"
+      }
+    },
+    "swizzle": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "swizzle"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "serve"
+      }
+    },
+    "clear": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "clear"
+      }
+    }
   }
-  
+}

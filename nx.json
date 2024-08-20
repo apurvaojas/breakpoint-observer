@@ -1,16 +1,17 @@
 {
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
+    }
+  },
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "nxCloudAccessToken": "OWI1NzBlNWQtYTcwYy00MDc1LTg5NzEtMTQ4YjRlYjBiZGRhfHJlYWQtd3JpdGU=",
   "namedInputs": {
-    "sharedGlobals": [
-      "{workspaceRoot}/.github/workflows/ci.yml"
-    ]
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "release": {
-    "projects": [
-      "packages/*"
-    ],
+    "projects": ["packages/*"],
     "version": {
       "conventionalCommits": true
     },
@@ -76,21 +77,9 @@
   "targetDefaults": {
     "@nx/angular:package": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "default",
-        "^default"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
     }
   },
-  "pluginsConfig": {
-    "@nx/js": {
-      "analyzeSourceFiles": true
-    }
-  },
-  "allowedNonPeerDependencies": [
-    "@breakpoint-observer/core"
-  ]
+  "allowedNonPeerDependencies": ["@breakpoint-observer/core"]
 }
