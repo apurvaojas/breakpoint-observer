@@ -1,6 +1,7 @@
 # Breakpoint Observer Angular Directive
 
-A Angular Directive around `@breakpoint-observer/core`, Subscribe to breakpoint change.
+A Angular Directive around `@breakpoint-observer/core`, 
+Subscribe to breakpoint changes. 
 
 
 ### Installation
@@ -21,12 +22,12 @@ import {
   BreakpointsList,
 } from '@breakpoint-observer/angular';
 
-// Setting Up Own Breakpoints
+// (Optional) Setting Up Own Breakpoints
 BreakpointService.setOptions({
   breakpoints: [{ mobile: 0 }, { tablet: 500 }, { desktop: 800 }],
 });
 
-// or it will default to inbuild bootstarap specification breakpoints
+// if we dont specify, it will default to inbuild bootstarap specification breakpoints as below
 
 const defaultBreakpoints: BreakpointConfig = [
   { xs: 0 },  // breakpointName: minWidth
@@ -39,7 +40,7 @@ const defaultBreakpoints: BreakpointConfig = [
 
 ```
 
-### Component 
+### Component
 
 ```typescript
 

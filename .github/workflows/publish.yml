@@ -3,8 +3,8 @@ name: Publish
 
 on:
   push:
-    tags:
-      - v*.*.*
+    branches:
+      - release-candidate
 
 jobs:
   test:
@@ -34,9 +34,16 @@ jobs:
         run: npx nx run-many -t build -p angular core react --no-cloud
         shell: bash
 
+      - name: Setup git identity
+        run: |
+          git config --global user.email "apurvaojas10@gmail.com"
+          git config --global user.name "Apurva Ojas"
+        shell: bash
+
       - name: Publish packages
-        run: npx nx release publish --no-cloud
+        run: npx nx release
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
+          NX_NO_CLOUD: true

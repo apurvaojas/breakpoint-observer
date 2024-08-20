@@ -1,7 +1,7 @@
 # Breakpoint Observer Core
 
-A Singleton service which emits an event when screen size changes and cross any configured breakpoint threshold.
-
+A Singleton service which emits an event when screen size changes and crosses any configured breakpoint threshold.
+You can subscribe to the event and listen on every breakpoint threshold change.
 
 ### Installation
 

@@ -22,12 +22,12 @@ import {
   BreakpointService,
 } from '@breakpoint-observer/react';
 
-// Setting Up Own Breakpoints
+// (Optional) Setting Up Own Breakpoints
 BreakpointService.setOptions({
   breakpoints: [{ mobile: 0 }, { tablet: 500 }, { desktop: 800 }],
 });
 
-// or it will default to inbuild bootstarap specification breakpoints
+// if we dont specify, it will default to inbuild bootstarap specification breakpoints
 
 const defaultBreakpoints: BreakpointConfig = [
   { xs: 0 },  // breakpointName: minWidth
