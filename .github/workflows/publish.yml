@@ -31,7 +31,7 @@ jobs:
         shell: bash
 
       - name: Build packages
-        run: npx nx build core react angular --no-cloud
+        run: npx nx run-many -t build -p angular core react --no-cloud
         shell: bash
 
       - name: Publish packages
