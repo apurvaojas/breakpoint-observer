@@ -1,9 +1,32 @@
 {
   "name": "@breakpoint-observer/core",
   "version": "1.0.0",
+  "description": "A simple and lightweight library to observe breakpoints Events.",
+  "keywords": [
+    "breakpoint",
+    "observer",
+    "media",
+    "query",
+    "responsive",
+    "design",
+    "system",
+    "event",
+    "emitter",
+    "eventemitter",
+    "onBreakpointChange"
+  ],
+  "author": "Apurva Ojas <apurvaojas10@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apurvaojas/breakpoint-observer/tree/main/packages/core"
+  },
   "dependencies": {
     "eventemitter3": "^5.0.1"
   },
   "main": "./index.cjs",
-  "module": "./index.js"
+  "module": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  }
 }

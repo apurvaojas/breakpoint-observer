@@ -1,4 +1,10 @@
-import { Directive, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Directive,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 import {
   ActiveBreakpoint,
@@ -11,7 +17,7 @@ import {
   selector: '[libBreakpointObserver]',
   standalone: true,
 })
-export class BreakpointObserverDirective implements OnInit {
+export class BreakpointObserverDirective implements OnInit, OnDestroy {
   @Output() breakpointChange =
     new EventEmitter<onBreakPointChangeCallbackArgs>();
 
@@ -28,12 +34,15 @@ export class BreakpointObserverDirective implements OnInit {
 
   ngOnInit() {
     this.breakpointService = BreakpointService.getInstance();
-    this.onBreakPointChange(
-      this.breakpointService.activeBreakpoint,
-      this.breakpointService.breakpoints
-    );
 
     this.breakpointService.on(
+      'onBreakPointChange',
+      this.onBreakPointChange.bind(this)
+    );
+  }
+
+  ngOnDestroy() {
+    this.breakpointService?.off?.(
       'onBreakPointChange',
       this.onBreakPointChange.bind(this)
     );

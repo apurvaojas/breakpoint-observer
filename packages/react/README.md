@@ -72,4 +72,4 @@ export default withBreakpointObserver(Example);
 
 
 ### Demo
-![Demo Image](../../docs/static/img/react-breakpoint-observer.gif)
+![Demo Image](https://raw.githubusercontent.com/apurvaojas/breakpoint-observer/main/docs/static/img/react-breakpoint-observer.gif)
