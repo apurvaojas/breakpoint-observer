@@ -1,6 +1,6 @@
 {
   "name": "@breakpoint-observer/angular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple and lightweight library to observe breakpoints Events in Angular. A Directive to observe breakpoints in Angular and update the Component with active breakpoint props.",
   "keywords": [
     "breakpoint",

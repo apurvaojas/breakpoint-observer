@@ -1,6 +1,6 @@
 {
   "name": "@breakpoint-observer/react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple and lightweight library to observe breakpoints Events in React. A Higher Order Component (HOC) to observe breakpoints in React and update the Component with active breakpoint props.",
   "keywords": [
     "breakpoint",
