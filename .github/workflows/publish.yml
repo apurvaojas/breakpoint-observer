@@ -46,7 +46,9 @@ jobs:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
 
       - name: Publish packages
-        run: npx nx release
+        run: |
+          npx nx release --skip-publish
+          npx nx release publish
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
